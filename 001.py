@@ -81,7 +81,7 @@ now_hours = int(n * 60)
 now_time = int(now_hours + m)
 end_time = int(now_time + t)
 time_delivery_hours = int(end_time // 60 % 24)
-time_delivery_min = int(end_time % 60 % 24)
+time_delivery_min = int(end_time % 60 % 60)
 if time_delivery_hours < 10 and time_delivery_min < 10:
     print(f"0{time_delivery_hours}:0{time_delivery_min}")
 elif time_delivery_hours < 10 and time_delivery_min >= 10: 
@@ -99,5 +99,17 @@ distance = float(b) - float(a)
 total = float(distance) / float(c) 
 print("%.2f" % total)
 #R
-#S 
+x = int(input())
+y = int(input())
+y2 = int(str(y), 2)
+total = x + y2
+print(total)
+#S
+x = int(input())
+y = int(input())
+x2 = int(str(x), 2)
+total = y - x2
+print(total)
+
 #T
+
