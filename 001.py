@@ -98,18 +98,52 @@ c = float(input())
 distance = float(b) - float(a)
 total = float(distance) / float(c) 
 print("%.2f" % total)
-#R
+#Q
 x = int(input())
 y = int(input())
 y2 = int(str(y), 2)
 total = x + y2
 print(total)
-#S
+#R
 x = int(input())
 y = int(input())
 x2 = int(str(x), 2)
 total = y - x2
 print(total)
+#S
+
+name = str(input())
+price = int(input())
+weight = int(input())
+money = int(input())
+total = int(weight * price)
+amount = int(money - total)
+print('%-7s' % ('================Чек================'))
+print('%-7s %27s' % ('Товар:', name))
+print('%-7s %27s' % ('Цена:', f"{weight}кг * {price}руб/кг"))
+print('%-7s %27s' % ('Итого:', f"{total}руб"))
+print('%-7s %26s' % ('Внесено:', f"{money}руб"))
+print('%-7s %27s' % ('Сдача:', f"{amount}руб"))
+print('%-7s' % ('==================================='))
 
 #T
 
+n = int(input())
+m = int(input())
+k1 = int(input())  # cost for kg
+k2 = int(input())  # cost for kg / this type of chop cheaper than k_1
+# x * k1 + y * k2 = m * n ( где x - масса первой партии, а y - масса второй партии )
+# можно представить одну из переменных, например y как (N - x) 
+# x * k1 + (N - x) * k2 = m * n
+# x * k1 + n * k2 - x * k2 = m * n
+# x * k1 - x * k2 = m * n - n * k2
+# x ( k1 - k2 ) = m * n - n * k2
+x = (m * n - n * k2) / (k1 - k2)
+y = n - x
+print(int(x), int(y), sep=' ')
+
+# или вот так
+n, m, k1, k2 = [int(input()) for _ in range(4)] 
+x = (m * n - n * k2) / (k1 - k2)
+y = n - x
+print(int(x), int(y), sep=' ')
