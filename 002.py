@@ -68,24 +68,48 @@ else:
 
 
 #G
-
+mynumber = input()
+if (mynumber[0] == mynumber[3] and mynumber[1] == mynumber[2]):
+    print("YES")
+else:
+    print("NO")
 
 
 #H
-
+text = input()
+if "зайка" in text:
+    print("YES")
+else:
+    print("NO")
 
 
 #I
-
+name1 = input()
+name2 = input()
+name3 = input()
+print(min(name1, name2, name3))
 
 
 
 #J
-
+first = input()
+x = int(first[2]) + int(first[1])
+y = int(first[1]) + int(first[0])
+if x > y:
+    print(str(x) + str(y))
+else:
+    print(str(y) + str(x))
 
 
 #K
-
+x = input()
+y = int(min(x[0], x[1], x[2]))
+z = int(max(x[0], x[1], x[2]))
+n = int(x[0]) + int(x[1]) + int(x[2]) - y - z
+if ((y + z) == n * 2):
+    print("YES")
+else:
+    print("NO")
 
 
 #L
