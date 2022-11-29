@@ -113,15 +113,37 @@ else:
 
 
 #L
-
+x = int(input())
+y = int(input())
+z = int(input())
+if (x < (y + z)) and (y < (x + z)) and (z < (x + y)):    
+    print("YES")
+else:
+    print("NO")
 
 
 #M
-
+x = input()
+y = input()
+z = input()
+if (x[0] == y[0] == z[0]):
+    print(x[0])
+elif (x[1] == y[1] == z[1]):
+    print(x[1])
 
 
 #N
-
+first = input()
+x = int(first[0])
+y = int(first[1])
+z = int(first[2])
+min = min(x, y, z)
+max = max(x, y, z)
+avg = int(x + y + z) - min - max
+if min > 0 and min <= avg and avg <= max:
+    print(str(min) + str(avg), str(max) + str(avg), sep=" ")
+elif min == 0 and min <= avg and avg <= max:
+    print(str(avg) + str(min), str(max) + str(avg), sep=" ")
 
 
 #O
