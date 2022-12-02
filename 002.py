@@ -147,6 +147,20 @@ elif min == 0 and min <= avg and avg <= max:
 
 
 #O
+first = input()
+second = input()
+x = int(first[0])
+y = int(first[1])
+m = int(second[0])
+n = int(second[1])
+min = min(x, y, m, n)
+max = max(x, y, m, n)
+avg = str(int(x + y + m + n) - min - max)
+if int(avg) >= 10:
+    avg2 = avg[1]
+else:
+    avg2 = avg[0]
+print(str(max) + str(avg2) + str(min))
 
 
 
